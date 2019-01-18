@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="5.4.1 -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=w6100_evb_stm32f103vc.map -O2 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\w6100_evb_stm32f103vc -TC:\CooCox\CoIDE\configuration\ProgramData\w6100_evb_stm32f103vc/arm-gcc-link.ld -g">
+      <target file="w6100_evb_stm32f103vc.elf" lastModified="167de927de4">
+         <source file="..\obj\socket.o" lastModified="167a12e9858"/>
+         <source file="..\obj\stm32f10x_rtc.o" lastModified="167a12e98c7"/>
+         <source file="..\obj\stm32f10x_tim.o" lastModified="167a12e99f7"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="167a12e9a5e"/>
+         <source file="..\obj\AddressAutoConfig.o" lastModified="167a63af15d"/>
+         <source file="..\obj\startup_stm32f10x_hd.o" lastModified="167a12e9cbb"/>
+         <source file="..\obj\stm32f10x_fsmc.o" lastModified="167a12e9d50"/>
+         <source file="..\obj\stm32f10x_pwr.o" lastModified="167a12e9db8"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="167a12e9e3c"/>
+         <source file="..\obj\main.o" lastModified="167de927bc5"/>
+         <source file="..\obj\w6100.o" lastModified="167a12ea099"/>
+         <source file="..\obj\wizchip_conf.o" lastModified="167a12ea179"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="167a12ea210"/>
+         <source file="..\obj\loopback.o" lastModified="167a12ea33e"/>
+         <source file="..\obj\stm32f10x_exti.o" lastModified="167a12ea3a8"/>
+         <source file="..\obj\stm32f10x_usart.o" lastModified="167a12ea443"/>
+         <source file="..\obj\dhcpv6.o" lastModified="167a640734b"/>
+         <source file="..\obj\syscalls.o" lastModified="167a12ea695"/>
+         <source file="..\obj\stm32f10x_flash.o" lastModified="167a12ea739"/>
+         <source file="..\obj\stm32f10x_dma.o" lastModified="167a12ea7ae"/>
+         <source file="..\obj\W6100RelFunctions.o" lastModified="167a12ea95e"/>
+         <source file="..\obj\misc.o" lastModified="167a12ea9c6"/>
+         <source file="..\obj\stm32f10x_wwdg.o" lastModified="167a12eaa2a"/>
+         <source file="..\obj\stm32f10x_spi.o" lastModified="167a12eaabf"/>
+         <source file="..\obj\HALInit.o" lastModified="167a12eabcc"/>
+         <source file="..\obj\usart.o" lastModified="167ab5bad87"/>
+         <source file="..\obj\stm32f10x_iwdg.o" lastModified="167a12eaca5"/>
+      </target>
+   </processor>
+</history>

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Internet /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\STM32F10x_StdPeriph_Driver /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\CooCox /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\CooCox\w6100_evb_stm32f103vc_SLAAC /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\CooCox\w6100_evb_stm32f103vc_SLAAC\cmsis_boot /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Ethernet /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\STM32F10x_StdPeriph_Driver\inc /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Ethernet\W6100 /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Application\loopback /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\CooCox\w6100_evb_stm32f103vc_SLAAC\cmsis /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Internet\DHCP6 /ID:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Application">
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h" lastModified="167631122ce">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" lastModified="167631122cb">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" lastModified="167631122fc">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="1668061c873">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" lastModified="167631122ce">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" lastModified="167631122d3">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c" lastModified="167631122f9">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\HALInit.h" lastModified="1668061c489">
+      </source>
+      <source file="..\..\..\HALInit.c" lastModified="1679b09d7ce">
+         <include file="..\..\..\w6100_evb.h"/>
+         <include file="..\..\..\HALInit.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h"/>
+      </source>
+      <source file="..\..\..\w6100_evb.h" lastModified="1668061c493">
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" lastModified="16763112306">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" lastModified="167631122d2">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c" lastModified="167631122d5">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h" lastModified="167631122cc">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\HAL_Config.h" lastModified="1668061c489">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="1668061c492">
+      </source>
+      <source file="..\..\..\AddressAutoConfig.h" lastModified="167a6087c92">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Internet\DHCP6\dhcpv6.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h" lastModified="167631122d3">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="1668061c491">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\AddressAutoConfig.c" lastModified="167a63aedba">
+         <include file="..\..\..\AddressAutoConfig.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c" lastModified="167631122d9">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c" lastModified="167631122d5">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="1668061c491">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c" lastModified="167631122d7">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" lastModified="167631122d8">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="1668061cc5c">
+      </source>
+      <source file="..\..\..\usart.h" lastModified="167ab5ad361">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd.c" lastModified="1668061c48d">
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c" lastModified="16763112300">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h" lastModified="167631122d0">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\W6100RelFunctions.h" lastModified="16781d0f35a">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h"/>
+      </source>
+      <source file="..\..\..\usart.c" lastModified="167ab5ad228">
+         <include file="..\..\..\usart.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h" lastModified="167631122d0">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h" lastModified="167812a53f5">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h" lastModified="167631122cf">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\W6100RelFunctions.c" lastModified="16781d01261">
+         <include file="..\..\..\w6100_evb.h"/>
+         <include file="..\..\..\W6100RelFunctions.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.c" lastModified="167812a53f5">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c" lastModified="16763112308">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Internet\DHCP6\dhcpv6.h" lastModified="167812a53f9">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h"/>
+      </source>
+      <source file="..\..\..\syscalls\syscalls.c" lastModified="1668061d432">
+         <include file="..\..\..\w6100_evb.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Internet\DHCP6\dhcpv6.c" lastModified="167a63afd6a">
+         <include file="..\..\..\..\..\Libraries\io6Library\Internet\DHCP6\dhcpv6.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h" lastModified="167631122cb">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="1668061cc5c">
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h" lastModified="167812a53f4">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x.h" lastModified="1668061c878">
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f10x.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Application\loopback\loopback.h" lastModified="1679b0f7400">
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.c" lastModified="167812a53dc">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h" lastModified="167631122cd">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Application\loopback\loopback.c" lastModified="167a0b521ca">
+         <include file="..\..\..\..\..\Libraries\io6Library\Application\loopback\loopback.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\socket.h"/>
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" lastModified="167631122d4">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" lastModified="16763112303">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h" lastModified="1679b0a2c0b">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\W6100\w6100.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h" lastModified="167631122d1">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.c" lastModified="167812a53f6">
+         <include file="..\..\..\..\..\Libraries\io6Library\Ethernet\wizchip_conf.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h" lastModified="167631122ca">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c" lastModified="167631122d7">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h"/>
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c" lastModified="167631122fe">
+         <include file="..\..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h"/>
+      </source>
+   </includePath>
+</dependencies>
