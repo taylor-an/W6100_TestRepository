@@ -39,6 +39,27 @@ void spiWriteByte(uint8_t byte)
 	while (SPI_I2S_GetFlagStatus(Open_SPIx, SPI_I2S_FLAG_RXNE) == RESET);
 	SPI_I2S_ReceiveData(Open_SPIx);
 }
+void spiReadBurst(uint8_t* pbuf,datasize_t len)
+{
+	uint8_t i;
+	for(i=0; i<len; i++){
+		while (SPI_I2S_GetFlagStatus(Open_SPIx, SPI_I2S_FLAG_TXE) == RESET);
+		SPI_I2S_SendData(Open_SPIx, 0xff);
+		while (SPI_I2S_GetFlagStatus(Open_SPIx, SPI_I2S_FLAG_RXNE) == RESET);
+		pbuf[i] = SPI_I2S_ReceiveData(Open_SPIx);
+	}
+}
+
+void spiWriteBurst(uint8_t* pbuf, datasize_t len)
+{
+	uint8_t i;
+	for(i = 0; i<len; i++){
+		while (SPI_I2S_GetFlagStatus(Open_SPIx, SPI_I2S_FLAG_TXE) == RESET);
+		SPI_I2S_SendData(Open_SPIx, pbuf[i]);
+		while (SPI_I2S_GetFlagStatus(Open_SPIx, SPI_I2S_FLAG_RXNE) == RESET);
+		SPI_I2S_ReceiveData(Open_SPIx);
+	}
+}
 
 //(*bus_wb)(uint32_t addr, iodata_t wb);
 void busWriteByte(uint32_t addr, iodata_t data)

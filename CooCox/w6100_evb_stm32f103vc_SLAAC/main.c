@@ -18,6 +18,9 @@ void delay(unsigned int count);
 extern uint8_t DNS6_Address[16];
 uint8_t MO_flag;
 uint8_t WIZ_MAC[6]     = {0x00, 0x08, 0xdc, 0xFE, 0x57, 0x99}; //MAC Address
+uint8_t dest_GUA[16] = {0x2a, 0x01, 0x05, 0xc0, 0x00, 0x18, 0x81, 0x01,
+					 0x02, 0x08, 0xdc, 0xFF, 0xFE, 0xFE, 0x57, 0x99};
+uint16_t dest_Port = 5000;
 
 void Main_MENU(void);
 void setMAC(uint8_t * WIZ_MAC);
@@ -61,7 +64,7 @@ int main(void)
 
 	while(!wizphy_getphylink());
 
-	printf("VERSION(%x) = %.2x \r\n", VER,getVER());
+	printf("VERSION = %.2x \r\n", getVER());
 
 	while(1)
 	{
@@ -101,6 +104,7 @@ void Main_MENU(void)
     printf("////--%2d : get My Address -------------------------////\r\n", num++);
 	printf("////--%2d : loopback_tcps --------------------------////\r\n", num++);
 	printf("////--%2d : loopback_udps --------------------------////\r\n", num++);
+	printf("////--%2d : loopback_tcpc --------------------------////\r\n", num++);
     printf("////-----------------------------------------------////\r\n");
     printf("////-----------------------------------------------////\r\n");
     printf("\r\n");
@@ -181,7 +185,7 @@ void Main_MENU(void)
         printf("%c is loopback_tcp server TEST!!\r\n", uart_menu);
 		while(1)
         {
-			loopback_tcps(0, 5000, data_buf, AF_INET6);
+			loopback_tcps(0, 5000, data_buf, AS_IPV6);
 		}
     }
 
@@ -190,8 +194,41 @@ void Main_MENU(void)
 		printf("%c is loopback_udp server TEST!!\r\n", uart_menu);
 		while(1)
 		{
-			loopback_udps(0, data_buf, 5000, AF_INET6);
+			loopback_udps(0, data_buf, 5000, AS_IPV6);
 		}
+	}
+	
+	else if ( uart_menu=='8' )
+	{
+		printf("%c is loopback_tcp client TEST!!\r\n", uart_menu);
+		while(1)
+		{
+			loopback_tcpc(0, data_buf, dest_GUA, dest_Port, AS_IPV6);
+		}
+	}
+	
+	else if ( uart_menu=='9' )
+	{
+		wiz_ARP arp;
+		printf("%c is ARP TEST!!\r\n", uart_menu);
+		arp.destinfo.len = 16;
+		arp.destinfo.ip[0] = 0x20;
+		arp.destinfo.ip[1] = 0x01;
+		arp.destinfo.ip[2] = 0x02;
+		arp.destinfo.ip[3] = 0xb8;
+		arp.destinfo.ip[4] = 0x00;
+		arp.destinfo.ip[5] = 0x10;
+		arp.destinfo.ip[6] = 0xff;
+		arp.destinfo.ip[7] = 0xfe;
+		arp.destinfo.ip[8] = 0x31;
+		arp.destinfo.ip[9] = 0x71;
+		arp.destinfo.ip[10] = 0x98;
+		arp.destinfo.ip[11] = 0x05;		
+		arp.destinfo.ip[12] = 0x70;
+		arp.destinfo.ip[13] = 0x24;
+		arp.destinfo.ip[14] = 0x4b;
+		arp.destinfo.ip[15] = 0xb1;
+		wizchip_arp(&arp);
 	}
 
     else
@@ -204,9 +241,9 @@ void Main_MENU(void)
 void setMAC(uint8_t * WIZ_MAC)
 {
 	uint8_t tmp[6];
-	NETCFG_UNLOCK();
+	NETUNLOCK();
 	setSHAR(WIZ_MAC);
-	NETCFG_LOCK();
+	NETLOCK();
 	getSHAR(tmp);
 	printf("Mac address : %.2x:%.2x:%.2x:%.2x:%.2x:%.2x \r\n",tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5]);
 }
@@ -224,6 +261,11 @@ void getAutoConfigAddress(void)
 																												 tmp[12], tmp[13], tmp[14], tmp[15]);
 	getGUAR(tmp);
 	printf("your Global IP is %.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x \r\n", tmp[ 0], tmp[ 1], tmp[ 2], tmp[ 3],
+																											 tmp[ 4], tmp[ 5], tmp[ 6], tmp[ 7],
+																											 tmp[ 8], tmp[ 9], tmp[10], tmp[11],
+																											 tmp[12], tmp[13], tmp[14], tmp[15]);
+	getSUB6R(tmp);
+	printf("your Subnet Mask is %.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x \r\n", tmp[ 0], tmp[ 1], tmp[ 2], tmp[ 3],
 																											 tmp[ 4], tmp[ 5], tmp[ 6], tmp[ 7],
 																											 tmp[ 8], tmp[ 9], tmp[10], tmp[11],
 																											 tmp[12], tmp[13], tmp[14], tmp[15]);

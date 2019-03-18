@@ -403,7 +403,7 @@ void Set_Indirect_Mode()
     GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
     GPIO_Init(GPIOF, &GPIO_InitStructure);
     
-		GPIO_SetBits(SPI_ENABLE_Port, GPIO_InitStructure.GPIO_Pin);
+	GPIO_SetBits(SPI_ENABLE_Port, GPIO_InitStructure.GPIO_Pin);
     //GPIO_ResetBits(SPI_ENABLE_Port, GPIO_InitStructure.GPIO_Pin);       // If PF14 is low, it will be indirect mode
 }
 

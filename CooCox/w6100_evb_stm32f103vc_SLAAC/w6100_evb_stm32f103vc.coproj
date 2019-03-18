@@ -76,8 +76,8 @@
   <Files>
     <File name="io6Library/Ethernet/W6100/w6100.c" path="../../Libraries/io6Library/Ethernet/W6100/w6100.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/src/misc.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/misc.c" type="1"/>
-    <File name="io6Library/Internet/DHCPv6/dhcpv6.h" path="../../Libraries/io6Library/Internet/DHCP6/dhcpv6.h" type="1"/>
     <File name="W6100RelFunctions.c" path="W6100RelFunctions.c" type="1"/>
+    <File name="io6Library/Internet/DHCPv6/dhcpv6.h" path="../../Libraries/io6Library/Internet/DHCP6/dhcpv6.h" type="1"/>
     <File name="io6Library/Internet" path="" type="2"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h" type="1"/>
@@ -87,7 +87,6 @@
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="HALInit.h" path="HALInit.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h" type="1"/>
-    <File name="io6Library/.git" path="../../Libraries/io6Library/.git" type="1"/>
     <File name="io6Library/Ethernet/W6100" path="" type="2"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_hd.c" path="cmsis_boot/startup/startup_stm32f10x_hd.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c" type="1"/>
@@ -100,12 +99,12 @@
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h" type="1"/>
     <File name="io6Library/Application/loopback" path="" type="2"/>
-    <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c" type="1"/>
+    <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c" type="1"/>
     <File name="io6Library" path="" type="2"/>
-    <File name="io6Library/Ethernet/W6100/w6100.h" path="../../Libraries/io6Library/Ethernet/W6100/w6100.h" type="1"/>
-    <File name="io6Library/Internet/DHCPv6" path="" type="2"/>
     <File name="io6Library/license.txt" path="../../Libraries/io6Library/license.txt" type="1"/>
+    <File name="io6Library/Internet/DHCPv6" path="" type="2"/>
+    <File name="io6Library/Ethernet/W6100/w6100.h" path="../../Libraries/io6Library/Ethernet/W6100/w6100.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_exti.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_exti.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_spi.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_spi.h" type="1"/>
     <File name="AddressAutoConfig.c" path="AddressAutoConfig.c" type="1"/>
@@ -113,9 +112,9 @@
     <File name="io6Library/Ethernet/wizchip_conf.c" path="../../Libraries/io6Library/Ethernet/wizchip_conf.c" type="1"/>
     <File name="io6Library/Ethernet/socket.h" path="../../Libraries/io6Library/Ethernet/socket.h" type="1"/>
     <File name="io6Library/Application/loopback/loopback.c" path="../../Libraries/io6Library/Application/loopback/loopback.c" type="1"/>
-    <File name="io6Library/Ethernet" path="" type="2"/>
-    <File name="STM32F10x_StdPeriph_Driver" path="" type="2"/>
     <File name="STM32F10x_StdPeriph_Driver/inc" path="" type="2"/>
+    <File name="STM32F10x_StdPeriph_Driver" path="" type="2"/>
+    <File name="io6Library/Ethernet" path="" type="2"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
@@ -129,29 +128,29 @@
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c" type="1"/>
     <File name="io6Library/Ethernet/Socket_APIs_V3.0.3.chm" path="../../Libraries/io6Library/Ethernet/Socket_APIs_V3.0.3.chm" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c" type="1"/>
-    <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_rtc.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rtc.h" type="1"/>
+    <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c" type="1"/>
     <File name="HALInit.c" path="HALInit.c" type="1"/>
     <File name="cmsis" path="" type="2"/>
     <File name="AddressAutoConfig.h" path="AddressAutoConfig.h" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h" type="1"/>
-    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="io6Library/Ethernet/wizchip_conf.h" path="../../Libraries/io6Library/Ethernet/wizchip_conf.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="io6Library/Internet/DHCPv6/dhcpv6.c" path="../../Libraries/io6Library/Internet/DHCP6/dhcpv6.c" type="1"/>
     <File name="io6Library/Application/loopback/loopback.h" path="../../Libraries/io6Library/Application/loopback/loopback.h" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="io6Library/Ethernet/socket.c" path="../../Libraries/io6Library/Ethernet/socket.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_dma.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dma.h" type="1"/>
-    <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c" type="1"/>
     <File name="W6100RelFunctions.h" path="W6100RelFunctions.h" type="1"/>
+    <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c" type="1"/>
     <File name="io6Library/.gitattributes" path="../../Libraries/io6Library/.gitattributes" type="1"/>
     <File name="io6Library/README.md" path="../../Libraries/io6Library/README.md" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h" type="1"/>
     <File name="io6Library/Application" path="" type="2"/>
     <File name="STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c" path="../../Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c" type="1"/>
-    <File name="main.c" path="main.c" type="1"/>
     <File name="STM32F10x_StdPeriph_Driver/inc/stm32f10x_pwr.h" path="../../Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_pwr.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
     <File name="io6Library/.gitignore" path="../../Libraries/io6Library/.gitignore" type="1"/>
   </Files>
 </Project>

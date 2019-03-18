@@ -36,9 +36,9 @@
 <input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.welcome.ui.WelcomePage/>
 </input>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/wiznet/00.CHIP/W6100/W6100_TestScenario/CooCox/w6100_evb_stm32f103vc_SLAAC/main.c" title="main.c" tooltip="D:/wiznet/00.CHIP/W6100/W6100_TestScenario/CooCox/w6100_evb_stm32f103vc_SLAAC/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/wiznet/00.CHIP/W6100/W6100_TestRepository/CooCox/w6100_evb_stm32f103vc_SLAAC/main.c" title="main.c" tooltip="D:/wiznet/00.CHIP/W6100/W6100_TestRepository/CooCox/w6100_evb_stm32f103vc_SLAAC/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/w6100_evb_stm32f103vc/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4625" selectionTopPixel="1755"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="942" selectionTopPixel="75"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="dhcpv6.c" partName="dhcpv6.c" title="dhcpv6.c" tooltip="D:\wiznet\00.CHIP\W6100\W6100_TestScenario\Libraries\io6Library\Internet\DHCP6\dhcpv6.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/D:/wiznet/00.CHIP/W6100/W6100_TestScenario/Libraries/io6Library/Internet/DHCP6/dhcpv6.c"/>
@@ -89,7 +89,8 @@
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11109" selectionTopPixel="4605"/>
 </editor>
 <editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="5" verticalPosition="0"/>
+<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="0" verticalPosition="0"/>
 </input>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="wizchip_conf.h" partName="wizchip_conf.h" path="D:/wiznet/00.CHIP/W6100/W6100_TestScenario/Libraries/io6Library/Ethernet/wizchip_conf.h" title="wizchip_conf.h" tooltip="D:/wiznet/00.CHIP/W6100/W6100_TestScenario/Libraries/io6Library/Ethernet/wizchip_conf.h" workbook="DefaultEditorWorkbook">
@@ -138,7 +139,11 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/w6100_evb_stm32f103vc"/>
-<element path="/w6100_evb_stm32f103vc/STM32F10x_StdPeriph_Driver"/>
+<element path="/w6100_evb_stm32f103vc/io6Library"/>
+<element path="/w6100_evb_stm32f103vc/io6Library/Application"/>
+<element path="/w6100_evb_stm32f103vc/io6Library/Application/loopback"/>
+<element path="/w6100_evb_stm32f103vc/io6Library/Ethernet"/>
+<element path="/w6100_evb_stm32f103vc/io6Library/Internet"/>
 </expanded>
 <selection>
 <element path="/w6100_evb_stm32f103vc/main.c"/>
@@ -385,34 +390,13 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/w6100_evb_stm32f103vc/io6Library/Ethernet/wizchip_conf.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/w6100_evb_stm32f103vc/io6Library/Ethernet/wizchip_conf.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/w6100_evb_stm32f103vc/main.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
+</editor>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="0" verticalPosition="0"/>
+</editor>
 </editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2933" y="0"/>
-</item>
-<item historyLabel="dhcpv6.c" index="1">
-<position info="not_deleted" x="2173" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5755" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5965" y="89"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="7390" y="20"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="7696" y="46"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2035" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1932" y="78"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2182" y="0"/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="5965" y="89"/>
 </item>
@@ -531,8 +515,31 @@
 <item historyLabel="main.c" index="17">
 <position info="not_deleted" x="1508" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="17">
+<item historyLabel="main.c" index="17">
 <position info="not_deleted" x="1650" y="9"/>
+</item>
+<item historyLabel="Configuration" index="18"/>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="4158" y="0"/>
+</item>
+<item historyLabel="Configuration" index="19"/>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="5987" y="2"/>
+</item>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="6443" y="0"/>
+</item>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="6250" y="62"/>
+</item>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="637" y="0"/>
+</item>
+<item historyLabel="main.c" index="17">
+<position info="not_deleted" x="1630" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="17">
+<position info="not_deleted" x="508" y="73"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -541,6 +548,12 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AddressAutoConfig.c" tooltip="w6100_evb_stm32f103vc/AddressAutoConfig.c">
+<persistable path="/w6100_evb_stm32f103vc/AddressAutoConfig.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="loopback.c" tooltip="w6100_evb_stm32f103vc/io6Library/Application/loopback/loopback.c">
+<persistable path="/w6100_evb_stm32f103vc/io6Library/Application/loopback/loopback.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="w6100.h" tooltip="w6100_evb_stm32f103vc/io6Library/Ethernet/W6100/w6100.h">
 <persistable path="/w6100_evb_stm32f103vc/io6Library/Ethernet/W6100/w6100.h"/>
 </file>
@@ -568,9 +581,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AddressAutoConfig.h" tooltip="w6100_evb_stm32f103vc/AddressAutoConfig.h">
 <persistable path="/w6100_evb_stm32f103vc/AddressAutoConfig.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AddressAutoConfig.c" tooltip="w6100_evb_stm32f103vc/AddressAutoConfig.c">
-<persistable path="/w6100_evb_stm32f103vc/AddressAutoConfig.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wizchip_conf.h" tooltip="w6100_evb_stm32f103vc/io6Library/Ethernet/wizchip_conf.h">
 <persistable path="/w6100_evb_stm32f103vc/io6Library/Ethernet/wizchip_conf.h"/>
 </file>
@@ -579,9 +589,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usart.c" tooltip="w6100_evb_stm32f103vc/usart.c">
 <persistable path="/w6100_evb_stm32f103vc/usart.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usart.h" tooltip="w6100_evb_stm32f103vc/usart.h">
-<persistable path="/w6100_evb_stm32f103vc/usart.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="w6100_evb_stm32f103vc/main.c">
 <persistable path="/w6100_evb_stm32f103vc/main.c"/>

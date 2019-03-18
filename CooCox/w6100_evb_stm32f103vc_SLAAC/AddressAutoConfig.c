@@ -187,7 +187,7 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 {
 	uint8_t result;
 	
-	volatile uint16_t size;
+	uint16_t size;
 	uint8_t  destip[16];
     uint16_t destport;
 	uint8_t addr_len, o_len;
@@ -203,6 +203,7 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 	uint8_t prefix_len, pi_flag;
 	uint32_t validtime, prefertime, dnstime;
 	uint8_t prefix[16];
+	uint8_t subnet[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	
 	#if (AutoConfig_debug == debug_on)
 	printf("\n\n\n================================================================\r\n");
@@ -219,8 +220,8 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 		return result;
     }
     
-	setICMP6BLKR(ICMP6BLK_RA);
-	setSn_PROTOR(sn, PROTOCOL_NUM_ICMPv6); //ICMPv6 : 58
+	setICMP6BLKR(ICMP6BLKR_RA);
+	setSn_PNR(sn, PROTOCOL_NUM_ICMPv6); //ICMPv6 : 58
 	socket(sn, Sn_MR_IPRAW6, 0, 0);
 	
 	#if (AutoConfig_debug == debug_on)
@@ -239,12 +240,22 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 	{
 		if(getSn_RX_RSR(sn) > 0)
 		{
-			printf("size : %d \r\n",sizeof(icmpbuf));
+			//size = recvfrom(sn, icmpbuf, size, destip, &destport, &addr_len);
 			size = recvfrom(sn, icmpbuf, buf_size, destip, &destport, &addr_len);
+			printf("after addr_len : %x, size : %x \r\n",addr_len,size);
+			for(i=0; i<size; i++){
+				printf("%.2x",icmpbuf[i]);
+				printf(" ");
+				if((i+1)%8==0)
+					printf("\r\n");
+			}
+			printf("\r\n");
 			printf("recvfrom IP : %x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x \r\n"
 			             ,destip[ 0],destip[ 1],destip[ 2],destip[ 3],destip[ 4],destip[ 5],destip[ 6],destip[ 7]
 			             ,destip[ 8],destip[ 9],destip[10],destip[11],destip[12],destip[13],destip[14],destip[15]);
+			NETUNLOCK();
 			setGA6R(destip);
+			NETLOCK();
 		}
 		
 		p = icmpbuf;
@@ -316,11 +327,19 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 						printf("preferred lifetime : %d \r\n", prefertime);
 						p++;p++;p++;p++;//reserved
 						getLLAR(prefix);
-						for(int i=0; i<prefix_len/8; i++)
+						
+						for(i=0; i<prefix_len/8; i++)
 						{
 							prefix[i] = *p++;
+							if((prefix_len % 8)==0)
+							{
+								subnet[i] = 0xFF;
+							}
 						}
+						NETUNLOCK();
 						setGUAR(prefix);
+						setSUB6R(subnet);
+						NETLOCK();
 						while((uint32_t)p != end_point)
 						{
 							p++;
@@ -376,7 +395,7 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 							if(1==(i%2))
 								printf(":");
 						}
-						printf("%x\r\n",DNS6_Address[15]);
+						printf("%.2x\r\n",DNS6_Address[15]);
 						break;
 					}
 					default : {
@@ -402,6 +421,11 @@ uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size)
 		
 	result = MO_flag;
 	
+	for(i=0; i<buf_size; i++){ // buf initialize
+	
+		icmpbuf[i] = 0;
+	}
+	
 	return result;
 }
 
@@ -425,7 +449,7 @@ uint8_t Duplicate_Address_Detection(uint8_t *mac_addr)
 	
 	Generate_EUI64(mac_addr, WIZ_LLA);
 	
-	setSLPIP6R(WIZ_LLA);//target address setting
+	setSLDIP6R(WIZ_LLA);//target address setting
 	
 	//setSLIMR(SLIR_TIOUT|SLIR_NS); //only external interrupt???
 	
@@ -447,15 +471,15 @@ uint8_t Duplicate_Address_Detection(uint8_t *mac_addr)
 	{
 		flags = getSLIR();
 				
-		if(flags&SLIR_TIOUT)
+		if(flags&SLIR_TOUT)
 		{
 			#if (AutoConfig_debug == debug_on)
 			printf("\nTimeout !!! DAD SUCCESSED\r\n");
 			#endif
-			NETCFG_UNLOCK();
+			NETUNLOCK();
 			//-- Set MAC Address
 			setLLAR(WIZ_LLA);
-			NETCFG_LOCK();
+			NETLOCK();
 			getLLAR(tmp_array);
 			#if (AutoConfig_debug == debug_on)
 			printf("\r\nLLA : %.2X%.2X:%.2X%.2X:%.2X%.2X:%.2X%.2X:%.2X%.2X:%.2X%.2X:%.2X%.2X:%.2X%.2X",
@@ -474,7 +498,7 @@ uint8_t Duplicate_Address_Detection(uint8_t *mac_addr)
 			result = ERROR_DAD_FAIL;
 		}
 	}
-	while(!((flags&SLIR_TIOUT)||(flags&SLIR_NS)));
+	while(!((flags&SLIR_TOUT)||(flags&SLIR_NS)));
         
     setSLIRCLR(flags);
 	

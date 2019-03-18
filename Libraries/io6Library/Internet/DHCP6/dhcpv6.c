@@ -378,7 +378,7 @@ uint8_t send_DHCP_REQUEST(void)
 		return 9;
 	}
     printf("req : %x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x \r\n",recv_IP[0],recv_IP[1],recv_IP[2],recv_IP[3],recv_IP[4],recv_IP[5],recv_IP[6],recv_IP[7],recv_IP[8],recv_IP[9],recv_IP[10],recv_IP[11],recv_IP[12],recv_IP[13],recv_IP[14],recv_IP[15]);
-    InitDhcpOption(110,1);DumpDhcpOption("option init");
+    InitDhcpOption(60,1);DumpDhcpOption("option init");
     
     AppendDhcpOption(DHCP6_REQUEST);
     AppendDhcpOption((uint8_t)((DHCP_XID & 0x00FF0000) >> 16));
@@ -417,23 +417,23 @@ uint8_t send_DHCP_REQUEST(void)
     AppendDhcpOption((uint8_t)(ValidLifeTime>>8));AppendDhcpOption((uint8_t)ValidLifeTime);DumpDhcpOption("Option IA_addr");
         
     // Status code
-    AppendDhcpOption(0x00);AppendDhcpOption(OPT_STATUS_CODE);DumpDhcpOption("Option status_code type");
-    AppendDhcpOption((uint8_t)(Lstatuscode_len>>8));AppendDhcpOption((uint8_t)Lstatuscode_len); DumpDhcpOption("Option status_code length");// length
-    AppendDhcpOption((uint8_t)(code>>8));AppendDhcpOption((uint8_t)code); DumpDhcpOption("Option status_code code");// code
+    //AppendDhcpOption(0x00);AppendDhcpOption(OPT_STATUS_CODE);DumpDhcpOption("Option status_code type");
+    //AppendDhcpOption((uint8_t)(Lstatuscode_len>>8));AppendDhcpOption((uint8_t)Lstatuscode_len); DumpDhcpOption("Option status_code length");// length
+    //AppendDhcpOption((uint8_t)(code>>8));AppendDhcpOption((uint8_t)code); DumpDhcpOption("Option status_code code");// code
 //    for(i=0; i<(statuscode_len-2); i++)
 //        AppendDhcpOption(status_msg[i]);
 //    DumpDhcpOption("Option status_code msg");
         
-    AppendDhcpOption(0x41);AppendDhcpOption(0x73);
-    AppendDhcpOption(0x73);AppendDhcpOption(0x69);
-    AppendDhcpOption(0x67);AppendDhcpOption(0x6e);
-    AppendDhcpOption(0x65);AppendDhcpOption(0x64);
-    AppendDhcpOption(0x20);AppendDhcpOption(0x61);
-    AppendDhcpOption(0x6e);AppendDhcpOption(0x20);
-    AppendDhcpOption(0x61);AppendDhcpOption(0x64);
-    AppendDhcpOption(0x64);AppendDhcpOption(0x72);
-    AppendDhcpOption(0x65);AppendDhcpOption(0x73);
-    AppendDhcpOption(0x73);AppendDhcpOption(0x2e); 
+//    AppendDhcpOption(0x41);AppendDhcpOption(0x73);
+//    AppendDhcpOption(0x73);AppendDhcpOption(0x69);
+//    AppendDhcpOption(0x67);AppendDhcpOption(0x6e);
+//    AppendDhcpOption(0x65);AppendDhcpOption(0x64);
+//    AppendDhcpOption(0x20);AppendDhcpOption(0x61);
+//    AppendDhcpOption(0x6e);AppendDhcpOption(0x20);
+//    AppendDhcpOption(0x61);AppendDhcpOption(0x64);
+//    AppendDhcpOption(0x64);AppendDhcpOption(0x72);
+//    AppendDhcpOption(0x65);AppendDhcpOption(0x73);
+//    AppendDhcpOption(0x73);AppendDhcpOption(0x2e); 
     
     // Client Identifier
     AppendDhcpOption(0x00);AppendDhcpOption(OPT_CLIENTID);
@@ -456,8 +456,8 @@ uint8_t send_DHCP_REQUEST(void)
     AppendDhcpOption((uint8_t)(serverid_len>>8));AppendDhcpOption((uint8_t)serverid_len); //length
     AppendDhcpOption((uint8_t)(DUID_type_s>>8));AppendDhcpOption((uint8_t)DUID_type_s); //DUID_Type
     AppendDhcpOption((uint8_t)(Hardware_type_s>>8));AppendDhcpOption((uint8_t)Hardware_type_s); //Hard_Type
-    AppendDhcpOption(Time_s[0]);AppendDhcpOption(Time_s[1]); // Time
-    AppendDhcpOption(Time_s[2]);AppendDhcpOption(Time_s[3]);
+    //AppendDhcpOption(Time_s[0]);AppendDhcpOption(Time_s[1]); // Time
+    //AppendDhcpOption(Time_s[2]);AppendDhcpOption(Time_s[3]);
     AppendDhcpOption(Server_MAC[0]);AppendDhcpOption(Server_MAC[1]); // MAC Addr
     AppendDhcpOption(Server_MAC[2]);AppendDhcpOption(Server_MAC[3]);
     AppendDhcpOption(Server_MAC[4]);AppendDhcpOption(Server_MAC[5]);DumpDhcpOption("Option Server ID");
@@ -682,7 +682,7 @@ int8_t parseDHCPMSG(void)
                                         recv_IP[ 0] = *p++; recv_IP[ 1] = *p++; recv_IP[ 2] = *p++; recv_IP[ 3] = *p++;
                                         recv_IP[ 4] = *p++; recv_IP[ 5] = *p++; recv_IP[ 6] = *p++; recv_IP[ 7] = *p++;
                                         recv_IP[ 8] = *p++; recv_IP[ 9] = *p++; recv_IP[10] = *p++; recv_IP[11] = *p++;
-                                        recv_IP[12] = *p++; recv_IP[13] = *p++; recv_IP[14] = *p++; recv_IP[1+5] = *p++;
+                                        recv_IP[12] = *p++; recv_IP[13] = *p++; recv_IP[14] = *p++; recv_IP[15] = *p++;
                                         PreLifeTime = (*p++<<24);
                                         PreLifeTime += (*p++<<16);
                                         PreLifeTime += (*p++<<8);
@@ -691,7 +691,7 @@ int8_t parseDHCPMSG(void)
                                         ValidLifeTime += (*p++<<16);
                                         ValidLifeTime += (*p++<<8);
                                         ValidLifeTime += (*p++);
-										printf("IANA : %x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x:%x%x \r\n",recv_IP[0],recv_IP[1],recv_IP[2],recv_IP[3],recv_IP[4],recv_IP[5],recv_IP[6],recv_IP[7],recv_IP[8],recv_IP[9],recv_IP[10],recv_IP[11],recv_IP[12],recv_IP[13],recv_IP[14],recv_IP[15]);
+										printf("IANA : %.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x:%.2x%.2x \r\n",recv_IP[0],recv_IP[1],recv_IP[2],recv_IP[3],recv_IP[4],recv_IP[5],recv_IP[6],recv_IP[7],recv_IP[8],recv_IP[9],recv_IP[10],recv_IP[11],recv_IP[12],recv_IP[13],recv_IP[14],recv_IP[15]);
                                         break;
 									}
                                     
@@ -792,7 +792,7 @@ int8_t parseDHCPMSG(void)
                                 printf("\r\n");
 								#endif
                             }
-                            
+                            //p++;p++;p++;p++;
                             Server_MAC[0] = *p++;
                             Server_MAC[1] = *p++;
                             Server_MAC[2] = *p++;
@@ -891,7 +891,7 @@ uint8_t DHCP_run2(void)
     }
     
     if(getSn_SR(DHCP_SOCKET) != SOCK_UDP){ // Check DHCP SOCKET == UDP
-        WIZCHIP_WRITE(Sn_TTLR(DHCP_SOCKET), 0x01); // hop limit 1로 설정
+        WIZCHIP_WRITE(_Sn_TTLR_(DHCP_SOCKET), 0x01); // hop limit 1로 설정
         socket(DHCP_SOCKET, (Sn_MR_UDP6), DHCP_CLIENT_PORT, 0x00);
 		}
 	ret = DHCP_RUNNING;
@@ -926,13 +926,13 @@ uint8_t DHCP_run(void)
     if(dhcp_state == STATE_DHCP6_STOP) return DHCP_STOPPED; // Check DHCP6 STOP State
     
     if(getSn_SR(DHCP_SOCKET) != SOCK_UDP){ // Check DHCP SOCKET == UDP
-        WIZCHIP_WRITE(Sn_TTLR(DHCP_SOCKET), 0x01); // hop limit 1로 설정
+        WIZCHIP_WRITE(_Sn_TTLR_(DHCP_SOCKET), 0x01); // hop limit 1로 설정
         socket(DHCP_SOCKET, (Sn_MR_UDP6), DHCP_CLIENT_PORT, 0x00);
 		}
         
     ret = DHCP_RUNNING;
     type = parseDHCPMSG();
-    printf("type:%d, dhcp_state :%d\r\n",type, dhcp_state);
+    //printf("type:%d, dhcp_state :%d\r\n",type, dhcp_state);
     switch ( dhcp_state ) {
 	    case STATE_DHCP6_INIT    : {
             DHCP_allocated_ip[ 0] = 0; DHCP_allocated_ip[ 1] = 0; DHCP_allocated_ip[ 2] = 0; DHCP_allocated_ip[ 3] = 0;
@@ -968,7 +968,10 @@ uint8_t DHCP_run(void)
 			break;
 		}
         case STATE_DHCP6_REQUEST : {
-            break;
+			NETUNLOCK();
+			setGUAR(recv_IP);
+			NETLOCK();
+            return DHCP_IP_LEASED;
 		}
         default : {
             break;

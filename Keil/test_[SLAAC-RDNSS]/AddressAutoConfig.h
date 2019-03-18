@@ -33,8 +33,8 @@
 
 void Generate_EUI64(uint8_t *mac_addr, uint8_t *Link_Local_Addr);
 uint8_t Duplicate_Address_Detection(uint8_t *mac_addr);
-uint8_t Address_Auto_Config_RA(uint8_t sn);
-uint8_t Address_Auto_Config_SLDHCP(uint8_t sn);
-uint8_t Address_Auto_Config_SFDHCP(uint8_t sn);
+uint8_t Address_Auto_Config_RA(uint8_t sn, uint8_t *icmpbuf, uint16_t buf_size);
+uint8_t Address_Auto_Config_SLDHCP(uint8_t sn, uint8_t* test_buf);
+uint8_t Address_Auto_Config_SFDHCP(uint8_t sn, uint8_t* test_buf);
 
 #endif // _ADDRESSAUTOCONFIG_

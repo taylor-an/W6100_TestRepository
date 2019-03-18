@@ -9,6 +9,8 @@
 
 uint8_t spiReadByte(void);
 void spiWriteByte(uint8_t byte);
+void spiWriteBurst(uint8_t* pbuf, datasize_t len);
+void spiReadBurst(uint8_t* pbuf,datasize_t len);
 void sysinit(void* arg);
 iodata_t busReadByte(uint32_t addr);
 void busWriteByte(uint32_t addr, iodata_t data);

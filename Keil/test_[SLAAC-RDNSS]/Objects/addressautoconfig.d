@@ -1,0 +1,10 @@
+.\objects\addressautoconfig.o: AddressAutoConfig.c
+.\objects\addressautoconfig.o: AddressAutoConfig.h
+.\objects\addressautoconfig.o: c:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\addressautoconfig.o: c:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Ethernet\W6100\w6100.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Ethernet\wizchip_conf.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Ethernet\./W6100/w6100.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Ethernet\../Application/Application.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Ethernet\socket.h
+.\objects\addressautoconfig.o: ..\..\Libraries\io6Library\Internet\DHCP6\dhcpv6.h

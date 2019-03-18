@@ -1,2 +1,2 @@
 # io6Library
-W6100
+io6Library is for dual TCP/IP statck contorller such as W6100.
